@@ -80,9 +80,13 @@ func main() {
 	userStream := api.UserStream(url.Values{})
 	fmt.Println("Connected User Stream")
 	for {
-		switch event := (<-userStream.C).(type) {
+		event, b := <-userStream.C
+		if !b {
+			break
+		}
+		switch t := event.(type) {
 		case anaconda.Tweet:
-			go onGotTweet(event)
+			go onGotTweet(t)
 		}
 	}
 }
