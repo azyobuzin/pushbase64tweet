@@ -1,0 +1,38 @@
+﻿{
+  "version": "2.0.0-*",
+  "description": "PushBase64Tweet Console Application",
+  "authors": [ "azyobuzin" ],
+  "projectUrl": "https://github.com/azyobuzin/pushbase64tweet",
+  "licenseUrl": "http://www.wtfpl.net/txt/copying/",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/azyobuzin/pushbase64tweet.git"
+  },
+  "dependencies": {
+    "CoreTweet": "0.5.4-beta",
+    "Newtonsoft.Json": "7.0.1",
+    "Rx-Linq": "2.3.0-*"
+  },
+  "commands": {
+    "pushbase64tweet": "PushBase64Tweet"
+  },
+  "frameworks": {
+    "dnx451": {
+      "frameworkAssemblies": {
+        "System.Net.Http": ""
+      }
+    },
+    "dnxcore50": {
+      "dependencies": {
+        "System.Collections": "4.0.11-*",
+        "System.Console": "4.0.0-*",
+        "System.Linq": "4.0.1-*",
+        "System.Threading": "4.0.11-*",
+        "Microsoft.CSharp": "4.0.1-*",
+        "System.Net.Http": "4.0.1-*",
+        "System.Net.WebSockets.Client": "4.0.0-*",
+        "System.Net.Requests": "4.0.11-*"
+      }
+    }
+  }
+}
